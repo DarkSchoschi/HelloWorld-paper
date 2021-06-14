@@ -1,0 +1,26 @@
+name: Updates Gradle 
+
+on:
+  push:
+    branches:
+      - master
+      - main
+      
+  schedule:
+    - cron:  '* 3 * * *'
+    
+    
+env:
+  gradle: "https://api.github.com/repos/gradle/gradle/releases/latest"
+  kspigot: "https://api.github.com/repos/bluefireoly/KSpigot/releases/latest"
+  kotlin: "https://api.github.com/repos/JetBrains/kotlin/releases/latest"
+  shadow_jar: "https://api.github.com/repos/johnrengelman/shadow/releases/latest"
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Version Check
+        run:
+          python ./.github/workflows/check_versions.py ${{ env.kspigot }} ${{ env.kotlin }} ${{ env.shadow_jar }} ${{ env.gradle }}
