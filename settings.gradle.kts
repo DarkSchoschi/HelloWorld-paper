@@ -1,4 +1,4 @@
-rootProject.name = "kspigot-gradle-template"
+rootProject.name = "join-quit-message"
 
 pluginManagement {
     val kotlin_version: String by settings

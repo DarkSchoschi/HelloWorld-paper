@@ -6,7 +6,7 @@ plugins {
     id("com.github.johnrengelman.shadow")
 }
 
-group = "org.example"
+group = "de.schoschi"
 version = "1.0"
 
 repositories {
@@ -21,7 +21,7 @@ val kspigot_version: String by project
 dependencies {
     // Spigot Dependency
     // https://www.spigotmc.org/wiki/buildtools/
-    compileOnly("org.spigotmc", "spigot", "$minecraft_version-R0.1-SNAPSHOT") // Only used on compile time because we have a PaperMC Server so we don't need it in the final jar
+    compileOnly("com.destroystokyo.paper", "paper", "${minecraft_version}-R0.1-SNAPSHOT")
 
     // KSpigot dependency
     implementation("net.axay", "kspigot", kspigot_version)
