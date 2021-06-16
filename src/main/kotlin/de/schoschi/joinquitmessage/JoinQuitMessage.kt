@@ -1,5 +1,6 @@
 package de.schoschi.joinquitmessage
 
+import net.axay.kspigot.extensions.broadcast
 import net.axay.kspigot.extensions.pluginManager
 import net.axay.kspigot.main.KSpigot
 import net.kyori.adventure.text.Component
