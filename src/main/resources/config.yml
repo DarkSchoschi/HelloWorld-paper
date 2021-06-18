@@ -1,0 +1,7 @@
+join_message: "[&a+&f] {username}"
+quit_message: "[&c-&f] {username}"
+not_permitted_join_message: "&cMomentan dürfen nur bestimmte Leute den Server betreten.\n\nSollte es sich hierbei um ein fehler handeln, melde dich bitte bei einem Administrator"
+
+permission:
+  only_permitted_join: false
+  bypass_permission: "joinquit.permitted.bypass"
